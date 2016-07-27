@@ -80,6 +80,7 @@ return array(
 	'event_manager:edit:form:tabs:location' => 'Location',
 	'event_manager:edit:form:tabs:contact' => 'Contact Details',
 	'event_manager:edit:form:tabs:registration' => 'Registration',
+	'event_manager:edit:form:tabs:questions' => 'Registration Questions',
 	'event_manager:edit:form:tabs:extra' => 'Extra',
 	'event_manager:edit:form:file' => 'Choose file',
 	'event_manager:edit:form:files' => 'Files',
@@ -246,8 +247,7 @@ Someone signed off from the '%s' event (%s). You are moved from the waiting list
 	'event_manager:event:search_attendees' => 'Search attendees',
 
 	'event_manager:registrationform:editquestion:required' => 'Required?',
-	'event_manager:registrationform:fieldorder:error' => 'Error changing field order',
-
+	
 	'event_manager:event:file:notfound:text' => 'The file you are looking for couldn\'t be found',
 
 	'event_manager:event:register:register_link' => 'Register to this event',

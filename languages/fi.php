@@ -175,7 +175,6 @@ Someone signed off from the \'%s\' event. You are moved from the waiting list to
   'event_manager:event:exportattendees' => 'Lataa osallistujat csv-tiedostona',
   'event_manager:event:search_attendees' => 'Search attendees',
   'event_manager:registrationform:editquestion:required' => 'Pakollinen',
-  'event_manager:registrationform:fieldorder:error' => 'Järjestyksen muuttaminen epäonnistui',
   'event_manager:event:file:notfound:text' => 'The file you are looking for couldn\'t be found',
   'event_manager:event:register:register_link' => 'Register to this event',
   'event_manager:event:menu:user_hover:resend_confirmation' => 'Resend confirmation email',

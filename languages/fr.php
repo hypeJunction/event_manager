@@ -153,7 +153,6 @@ une personne s\'est désinscrite de l\'évènement \'%s\' . Vous n\'êtes plus s
   'event_manager:event:waitinglist:empty' => 'La liste d\'attente est vide',
   'event_manager:event:exportattendees' => 'Exporter les participant(e)s',
   'event_manager:registrationform:editquestion:required' => 'Obligatoire ?',
-  'event_manager:registrationform:fieldorder:error' => 'Erreur en changeant ordre des champs',
   'event_manager:event:file:notfound:text' => 'Le fichier que vous cherchez n\'a pas été trouvé',
   'event_manager:event:register:register_link' => 'S\'inscrire à cet évènement',
   'event_manager:event:view:event' => 'Evènements',

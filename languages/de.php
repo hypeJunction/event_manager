@@ -178,7 +178,6 @@ Jemand hat sich von der Veranstaltung \'%s\' abgemeldet (%s). Du wurdest von der
   'event_manager:event:exportattendees' => 'Exportiere Teilnehmer',
   'event_manager:event:search_attendees' => 'Suche Teilnehmer',
   'event_manager:registrationform:editquestion:required' => 'Ben&ouml;tigt?',
-  'event_manager:registrationform:fieldorder:error' => 'Fehler beim sortieren der Felder',
   'event_manager:event:file:notfound:text' => 'Die Datei die du suchst konnte nicht gefunden werden',
   'event_manager:event:register:register_link' => 'Zu dieser Vanstaltung anmelden',
   'event_manager:event:menu:user_hover:resend_confirmation' => 'Best&auml;tigungs-Mail erneut versenden',

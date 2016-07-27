@@ -114,7 +114,6 @@ je staat op de wachtlijst van het \'%s\' evenement.',
   'event_manager:event:registration:notification:user:text:event_spotfree' => 'Beste %s,
 
 Iemand heeft zich afgemeld van het \'%s\' evenement (%s). Je bent van de wachtlijst naar de deelnemers verplaatst.',
-  'event_manager:registrationform:fieldorder:error' => 'Fout tijdens het herordenen van de velden',
   'event_manager:action:registration:edit:error_fields_with_program' => 'Vul de verplichte velden in en selecteer ten minste 1 activiteiten slot om aan deel te nemen',
   'event_manager:settings:google_maps' => 'Google Maps instellingen',
   'event_manager:settings:other' => 'Overige',

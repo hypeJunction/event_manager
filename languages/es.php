@@ -176,7 +176,6 @@ Alguien se ha dado de baja del evento \'%s\'. Has sido movido de la lista de esp
   'event_manager:event:exportattendees' => 'Exportar asistentes',
   'event_manager:event:search_attendees' => 'Buscar asistentes',
   'event_manager:registrationform:editquestion:required' => '¿Necesario?',
-  'event_manager:registrationform:fieldorder:error' => 'Error al cambiar el orden de los campos',
   'event_manager:event:file:notfound:text' => 'El fichero que buscas no pudo ser encontrado',
   'event_manager:event:register:register_link' => 'Inscribirse a este evento',
   'event_manager:event:menu:user_hover:resend_confirmation' => 'Reenviar e-mail de confirmación',

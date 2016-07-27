@@ -122,6 +122,39 @@ if ($icon_file) {
 	$event->deleteIcon();
 }
 
+$questions = get_input('questions');
+foreach ($questions as $question) {
+	$question_guid = get_input('question_guid');
+	$fieldtype = get_input('fieldtype');
+	$fieldoptions = get_input('fieldoptions');
+	$questiontext = get_input('questiontext');
+	$required = get_input('required');
+	
+	if ($question_guid) {
+		//elgg_entity_gatekeeper($question_guid, 'object', EventRegistrationQuestion::SUBTYPE);
+		$question = get_entity($question_guid);
+	} else {
+		$question = new EventRegistrationQuestion();
+	}
+	
+	$question->title = $questiontext;
+	$question->container_guid = $event->guid;
+	$question->owner_guid = $event->guid;
+	$question->access_id = $event->access_id;
+	
+	if ($question->save()) {
+		$question->fieldtype = $fieldtype;
+		$question->required = $required;
+		$question->fieldoptions = $fieldoptions;
+	
+		if (empty($question_guid)) {
+			$question->order = $event->getRegistrationFormQuestions(true);
+		}
+	
+		$question->addRelationship($event->getGUID(), 'event_registrationquestion_relation');
+	}
+}
+
 // added because we need an update event
 $event->save();
 

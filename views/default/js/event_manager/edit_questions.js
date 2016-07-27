@@ -12,9 +12,7 @@ elgg.event_manager.edit_questions_add_field = function(form) {
 			if(guid) {
 				$('#question_' + guid).replaceWith(data.output);
 			} else {
-				$('#event_manager_registrationform_fields').append(data.output);
-
-				elgg.event_manager.edit_questions_save_order();
+				$('.event_manager_registrationform_fields').append(data.output);
 			}
 		},
 		error: function() {
@@ -23,58 +21,30 @@ elgg.event_manager.edit_questions_add_field = function(form) {
 	});
 };
 
-elgg.event_manager.edit_questions_save_order = function() {
-	var order = $('#event_manager_registrationform_fields').sortable('serialize');
-	elgg.action('event_manager/question/save_order?' + order);
-};
-
 elgg.event_manager.edit_questions_init = function() {
 	
-	$('#event_manager_registrationform_fields').sortable({
+	$('.event_manager_registrationform_fields').sortable({
 		axis: 'y',
 		tolerance: 'pointer',
 		opacity: 0.8,
 		forcePlaceholderSize: true,
 		forceHelperSize: true,
-		update: function(event, ui)	{
-			elgg.event_manager.edit_questions_save_order();
-		}
 	});
 	
 	$(document).on('click', '.event_manager_questions_delete', function(e) {
-		if (!confirm(elgg.echo('deleteconfirm'))) {
-			return false;
+		if (e.isDefaultPrevented()) {
+			return;
 		}
-		
-		var questionGuid = $(this).attr("rel");
-		if (!questionGuid) {
-			return false;
-		}
-		
-		$questionElement = $(this).parents('.elgg-module-popup').eq(0);
-		$questionElement.hide();
-		
-		elgg.action('event_manager/question/delete', {
-			data: {
-				guid: questionGuid
-			}, 
-			success: function(data) {
-				// remove from DOM
-				$questionElement.remove();
-			},
-			error: function() {
-				// revert
-				$questionElement.show();
-			}
-		});
+		$(this).parents('.elgg-item-object-eventregistrationquestion').eq(0).remove();
 	});
 
 	$(document).on('change', '#event_manager_registrationform_question_fieldtype', function() {
 		var type = $(this).val();
+		var $parent = $(this).parents('.elgg-item-object-eventregistrationquestion').eq(0);
 		if (type == 'Radiobutton' || type == 'Dropdown') {
-			$('.event_manager_registrationform_select_options').show();
+			$parent.find('.event_manager_registrationform_select_options').show();
 		} else {
-			$('.event_manager_registrationform_select_options').hide();
+			$parent.find('.event_manager_registrationform_select_options').hide();
 		}
 		
 		$.colorbox.resize();
